@@ -1,7 +1,8 @@
 <html>
+  
   <head>
-
-    <title>Valid Document</title>
+<title>Contact Document</title>
+ 
 
     <style>
 
@@ -11,24 +12,32 @@
         text-align:center;
         font-family:Lucida Calligraphy;
       }
-
+      form{
+        background:white;
+        padding:20px;
+        border-radius:10px;
+        box-shadow:0px 0px 10px gray;
+        display:inline-block;
+      }
+      
       input{
         padding:10px;
         margin:10px;
+        width:200px;
       }
+      
       button{
         padding:10px;
         background:blue;
         color:white;
         border:none;
-        border-radius:5px;
-        
       }
       
     </style>
 
     <script>
       function validateForm(){
+        
         let name = 
           document.getElementById("name").value;
          let email =
@@ -43,17 +52,20 @@
             -1){
           alert("Enter valid email");
           return false;
+         }
 
         alert("Form submitted successfully");
         return true;
+
       }
         </script>
    
-  </head>
+        </head>
 
-  <body>
+       <body>
 
     <h2>Contact Form</h2>
+         
     <form onsubmit="return validateForm()">
 
       <input type="text" id="name" 
@@ -61,7 +73,11 @@
 
       <input type="text" id="email"
         placeholder="Enter your email"><br>
+      
       <button type="submit">Submit</button>
+      
     </form>
+         
   </body>
+  
 </html>
