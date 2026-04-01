@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Form Validation</title>
+
+<style>
+  body{
+    text-align:center;
+    font-family:Arial;
+  }
+
+  input{
+    padding:10px;
+    margin:10px;
+  }
+
+button{
+  padding:10px;
+  background:blue;
+  color:white;
+  border:none;
+}
+
+</style>
+
+
+  <script>
+
+    funstion validateForm(){
+      let name = document.getElementById("name"
+                                         ).value;
+
+      if (name == ""){
+        alert("Name cannot be empty");
+        return false; 
+      }
+
+      alert("Form submitted successfully");
+      return true;
+    }
+  </script>
+</head>
+
+<body>
+  <h2>Contact Form</h2>
+
+  <form onsubmit="return validateForm()">
+
+    <input type="text" id="name" placeholder
+      =Enter your name"><br>
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+
+</html>
+
