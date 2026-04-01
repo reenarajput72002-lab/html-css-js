@@ -1,84 +1,75 @@
 <html>
-  
-  <head>
-<title>Contact Document</title>
- 
 
-  <style>
+<head>
+<title>Contact Form</title>
 
-      body{
-        background:linear-gradient(to right, purple, 
-                                   white, green);
-        text-align:center;
-        font-family:Lucida Calligraphy;
-      }
-      form{
-        background:white;
-        padding:20px;
-        border-radius:10px;
-        box-shadow:0px 0px 10px gray;
-        display:inline-block;
-      }
-      
-      input{
-        padding:10px;
-        margin:10px;
-        width:200px;
-      }
-      
-      button{
-        padding:10px;
-        background:blue;
-        color:white;
-        border:none;
-      }
-      
-    </style>
+<style>
+body{
+text-align:center;
+font-family:Arial;
+background:linear-gradient(to right, lightblue, white, pink);
+}
 
-    <script>
-      function validateForm(){
-        
-        let name = 
-          document.getElementById("name").value;
-         let email =
-          document.getElementById("email").value;
+form{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0px 0px 10px gray;
+display:inline-block;
+}
 
+input{
+padding:10px;
+margin:10px;
+width:200px;
+}
 
-        if(name == ""){
-          alert("Name cannot be empty");
-          return false;
-        }
-         if (email == "" || email.index0f("@") ==
-            -1){
-          alert("Enter valid email");
-          return false;
-         }
+button{
+padding:10px;
+background:blue;
+color:white;
+border:none;
+}
+</style>
 
-        alert("Form submitted successfully");
-        return true;
+<script>
+function validateForm(){
 
-      }
-        </script>
-   
-        </head>
+let name = document.getElementById("name").value;
+let email = document.getElementById("email").value;
 
-       <body>
+if(name == ""){
+alert("Name cannot be empty 😡");
+return false;
+}
 
-    <h2>Contact Form</h2>
-         
-    <form onsubmit="return validateForm()">
+if(email == "" || email.indexOf("@") == -1){
+alert("Enter valid email 😡");
+return false;
+}
 
-      <input type="text" id="name" 
-        placeholder="Enter your name"><br>
+alert("Form submitted successfully 🎉");
+return true;
 
-      <input type="text" id="email"
-        placeholder="Enter your email"><br>
-      
-      <button type="submit">Submit</button>
-      
-    </form>
-         
-  </body>
-  
+}
+</script>
+
+</head>
+
+<body>
+
+<h2>Contact Form</h2>
+
+<form onsubmit="return validateForm()">
+
+<input type="text" id="name" placeholder="Enter your name"><br>
+
+<input type="text" id="email" placeholder="Enter your email"><br>
+
+<button type="submit">Submit</button>
+
+</form>
+
+</body>
+
 </html>
-
