@@ -37,6 +37,10 @@ button{
       alert("Form submitted successfully");
       return true;
     }
+
+    function goHome(){
+      window.location.href="index.html";
+    }
   </script>
 </head>
 
@@ -44,6 +48,8 @@ button{
   <h2>Contact Form</h2>
 
   <form onsubmit="return validateForm()">
+
+    <button onclick="goHome()">Go Home</button>
 
     <input type="text" id="name" placeholder
       =Enter your name"><br>
